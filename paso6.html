@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gonzalo Maraver Castro">
+    <link rel="stylesheet" href="style.css">
+    <title>How To (Maquinas Virtuales)</title>
+</head>
+<body>
+    <div class="content">            
+        <h2 class="subTitulo">Configuración de Samba</h2>
+        <p>
+            Para poder compartir la carpeta creada con la maquina virtual de windows debemos introducir una serie
+            de lineas en la configuracion de samba.<br>
+
+            Para esto accederemos como administrador en la terminal e introduciremos<br>
+            > nano /etc/samba/smb.conf
+            <Br><br>
+            <img src="src/img/samba_config/1.png" alt="1" width="45%">
+            <img src="src/img/samba_config/2.png" alt="2" width="45%"><br>
+            Esto nos abrirá un editor de texto el cual contiene la configuracion de samba y en el cual deberemos
+            bajar al final del todo e introducir esto:<br>
+            ● [Compartida] <br>
+                o path = /home/winuser/compartida<br>
+                o browseable = yes<br>
+                o read only = no<br>
+                o valid users = winuser
+            <br><br>
+            <img src="src/img/samba_config/3.png" alt="3" width="45%"><br>
+            Y saldremos pulsando CTRL+X y guardando.<br>
+            Ahora vamos a añadir el usuario winuser a los usuarios de samba y vamos a asignarle una contraseña.
+            <br><br>
+            <img src="src/img/samba_config/4.png" alt="4" width="45%">
+            <img src="src/img/samba_config/5.png" alt="5" width="45%"><br>
+            Ahora debemos acceder al usuario winuser y crear un archivo en la carpeta que hemos creado anteriormente
+            con el comando:<Br>
+            > touch nombreArchivo
+        </p>
+
+    </div>
+
+</body>
+</html>

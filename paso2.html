@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gonzalo Maraver Castro">
+    <link rel="stylesheet" href="style.css">
+    <title>How To (Maquinas Virtuales)</title>
+</head>
+<body>
+    <div class="content">            
+        <h2 class="subTitulo">Configuración red NAT.</h2>
+        <p>
+            Para empezar a utilizar nuestra máquina virtual debemos descargar unos paquetes que contienen
+            actualizaciones del sistema, para una optimización de el S.O.
+            Es muy sencillo deberemos encender las máquinas y seguir una serie de cortos pasos
+            <br><br>
+            <img src="src/img/nat/1.png" alt="paso1" width="45%">
+            <img src="src/img/nat/2.png" alt="paso2" width="45%"><br>
+            Debemos acceder a las herramientas que incluye VirtualBox y accederemos al apartado "Red". Posteriormente
+            accederemos a "Redes NAT" y crearemos una llamada NAT.
+            <br><br>
+            <img src="src/img/nat/3.png" alt="paso3" width="45%">
+            <img src="src/img/nat/4.png" alt="paso4" width="39.5%"><br>
+            Pulsaremos en aplicar y volveremos a la pantalla principal de VirtualBox, ahí debemos acceder a la configuracion de ambas maquinas,
+            accederemos al apartado Red>Adaptador 1>Conectado a: "Red NAT">Nombre:"NAT".<br><br>
+            <img src="src/img/nat/5.png" alt="paso5" width="45%"><br>
+            Aqui vemos como esta ya conectada a la red oportuna que nosotros hemos creado.
+            <br><br>
+            <img src="src/img/nat/7.png" alt="" width="45%">
+            <img src="src/img/nat/8.png" alt="" width="45%">
+            Accedemos a la terminal de ubuntu y accedemos a nuestro usuario con el comando "su" e introduciendo nuestra contraseña<br>
+            Ahora debemos introducir el comando "apt install net-tools" para tener acceso al ifconfig, asi podremos checkear nuestra IP.
+            <br><br>
+            <img src="src/img/nat/9.png" alt="" width="45%"> 
+            <img src="src/img/nat/10.png" alt="" width="45%"> <br>
+            Vemos como haciendo ping desde nuestras maquinas, ambas se pueden conectar. Esto es vital para crear el compartimento de archivos
+            dentro de ellas
+        </p>
+
+    </div>
+
+</body>
+</html>

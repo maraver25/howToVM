@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gonzalo Maraver Castro">
+    <link rel="stylesheet" href="style.css">
+    <title>How To (Maquinas Virtuales)</title>
+</head>
+<body>
+    <div class="content">            
+        <h2 class="subTitulo">Descarga de ISO.</h2>
+        <p>Para empezar con la virtualización de una "máquina", lo primero que 
+            debemos hacer como en todos los sistemas es descargar la imagen del 
+            sistema operativo para instalarla en el equipo (ISO). Para ello
+            vamos a instalar "Windows 10" y "Ubuntu 22.04"<br>
+            Vamos a acceder a la <a href="https://www.microsoft.com/es-es/software-download/windows10">pagina web de microsoft </a>
+            para instalar la herramienta "mediacreationtool.exe". <br>
+            <img src="src/img/descarga_herramienta.png" alt="mediacreationtool"><br>
+            Al acceder vamos hacia abajo y seleccionamos la opción <strong>"Descarga ahora la herramienta".</strong><br>
+            Abrimos, aceptamos los terminos y condiciones, esperamos 
+            que realice los preparativos pertinentes. Debemos seleccionar <strong>
+            "Crear medios de Instalación (unidad flash USB, DVD o archivo ISO) para otro PC".
+            </strong>
+            <br><img class="imgp1" src="src/img/archivo_iso.png" alt="archivo_iso" width="25%">
+            <img src="src/img/Arquitectura y so.png" alt="Arquitectura" width="25%">
+            <img src="src/img/a" alt=""><br>
+            Pulsamos en siguiente y seleccionamos las caracteristicas que buscamos (Windows 10 64 bits),
+            siguiente.<br>
+            <Strong>IMPORTANTE</Strong> debemos seleccionar la segunda opción "Archivo ISO", esto es vital
+            para obtener la imagen y poder instalarla en VirtualBox.
+            <br>
+            Ya tenemos las imagenes de los sistemas operativos instaladas, ahora deberemos abrir VirtualBox.
+            Al abrirlo deberemos acceder a herramientas y debemos de pulsar en "NUEVA". Y empezaremos la configuración<br>
+            <img src="src/img/abrimos virtualbox.png" alt="abrimos virtualbox" width="35%">
+            <img src="src/img/Asignamos nombre almacenamiento, imagen ISO y sistema operativo.png" alt="usuario etc" width="35%">
+            <br> Debemos seleccionar, el nombre que le queremos dar a la maquina, su carpeta de instalacion, la imagen iso que instalamos anteriormente 
+            y pulsamos en siguiente.<br>
+            <img src="src/img/usuario contrasena vbox.png" alt="nombre de usuario" width="35%">
+            <img src="src/img/memoria y procesos.png" alt="memoria" width="35%"><br>
+            Asignamos un nombre de usuario y una contraseña para el usuario del sistema operativo y le asignamos su memoria
+            y sus procesadores. Ahora debemos crear una particion virtual y asignarle su espacio para que en ese espacio se instale
+            el sistema operativo. En este caso asginaremos 20GB para que haya espacio de sobra<br>
+            <img src="src/img/disco virtual.png" alt>
+    </div>
+
+</body>
+</html>
